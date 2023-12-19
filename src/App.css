@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* App.css */
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem; /* This corresponds to mt-5 in Tailwind */
+}
+
+.header-inner {
+  background-color: #f3dcbc; /* This is the 'beige' color from your Tailwind config */
+  padding: 0.25rem 0.75rem; /* px-3 and py-1 in Tailwind */
+  border: 2px solid white;
+  border-radius: 0.5rem; /* This is the 'rounded-lg' in Tailwind */
+}
+
+.header-title {
+  font-family: 'Lato', sans-serif; /* Ensure 'Lato' font is imported in your HTML or CSS */
+  font-weight: 500; /* Corresponds to 'font-medium' in Tailwind */
+  font-size: 3rem; /* This is roughly 'text-5xl' in Tailwind */
+  color: #ff9a79; /* This is the 'salmon' color from your Tailwind config */
+}
+
+.app-container {
+  position: relative;
+  background-color: #f3dcbc; /* beige color */
+  background-image: url('./public/bg.png'); /* Adjust the path as necessary */
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh; /* full height of the viewport */
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-in-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sign-in-button:hover {
+  transform: scale(1.10); 
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.4));
+  transition: transform 0.3s ease;
+}
+
+.game-container {
+  margin-top: 5rem;
+  align-self: center;
+}
+
+.game {
+  margin: 1rem
+}
+
+.sign-in-button {
+  width: 320px; /* Set the width to the size you want */
+  height: auto; /* Keep the aspect ratio of the button */
+}
