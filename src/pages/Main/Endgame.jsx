@@ -12,17 +12,17 @@ const Endgame = (props) => {
     } else if (score >= 700) {
         endgameMessage = "Great job! You scored very high!";
     } else if (score >= 500) {
-        endgameMessage = "Nice effort! You have a good grasp of trivia.";
+        endgameMessage = "Nice effort! You have a good grasp on the subject.";
     } else {
         endgameMessage = "You suck!";
     }
 
     return (
-        <div>
-            <h1>Game Over</h1>
-            <h2>Your Score: {score}</h2>
-            <p>{endgameMessage}</p>
-            <Link to ='/category'>Play again</Link>
+        <div className="eg-container">
+            <h1 className="game-over">Game Over</h1>
+            <h2 className="ur-score">Your Score: {score}</h2>
+            <p className="eg-message">{endgameMessage}</p>
+            <Link className="pa-link" to ='/category'>Play again</Link>
         </div>
     );
 };

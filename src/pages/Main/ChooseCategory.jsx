@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+
 
 const Category = () => {
+    const location = useLocation()
+    const difficulty = location.state?.difficulty
     const navigate = useNavigate()
     const handleClick = (category) => {
-        navigate('/play', {state: {category}})
+        navigate('/play', {state: {category, difficulty}})
     }
 
     return (

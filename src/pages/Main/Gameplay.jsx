@@ -7,11 +7,12 @@ const Gameplay = () => {
     const navigate = useNavigate()
     const location = useLocation()
     const category = location.state?.category
+    const difficulty = location.state?.difficulty
     const [count, setCount] = useState(0)
     const [score, setScore] = useState(0)
     const fetchTrivia = async () => {
         try {
-            const res = await fetch(`https://the-trivia-api.com/v2/questions?categories=${category}`, {
+            const res = await fetch(`https://the-trivia-api.com/v2/questions?categories=${category}&${difficulty}`, {
                 headers: {
                     'Content-Type': 'application/json',
                 }
@@ -26,14 +27,14 @@ const Gameplay = () => {
     function shuffleArray(array) {
         let currentIndex = array.length,  randomIndex;
       
-        // While there remain elements to shuffle.
+ 
         while (currentIndex > 0) {
       
-          // Pick a remaining element.
+       
           randomIndex = Math.floor(Math.random() * currentIndex);
           currentIndex--;
       
-          // And swap it with the current element.
+     
           [array[currentIndex], array[randomIndex]] = [
             array[randomIndex], array[currentIndex]];
         }
@@ -63,7 +64,7 @@ const Gameplay = () => {
         console.log(trivia)
        
         return(
-            <section>
+            <section className="game-section">
                 <div className="question-wrapper">
                     <h2 className="question">{trivia[count].question.text}</h2>
                 </div>

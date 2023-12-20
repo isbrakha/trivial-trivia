@@ -9,6 +9,7 @@ import Gameplay from './pages/Main/Gameplay'
 import Endgame from "./pages/Main/Endgame";
 import Auth0ProviderWithNavigate from "./components/Auth/Auth0ProviderWithNavigate";
 import Settings from "./pages/Main/Settings";
+import Difficulty from "./pages/Main/ChooseDifficulty";
 
 const App = () => {
   return (
@@ -22,8 +23,8 @@ const App = () => {
           <Route path="/category" element={<Category />}/>
           <Route path="/play" element={<Gameplay />}/>
           <Route path="/finish" element={<Endgame />}/>
-          <Route path="/setting" element={<Settings />}/>
-
+          <Route path="/difficulty" element={<Difficulty />}/>
+          <Route path="/settings" element={<Settings />}/>
         </Routes>
         </Auth0ProviderWithNavigate>
       </div>
