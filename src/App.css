@@ -27,7 +27,7 @@ body {
 .app-container {
   position: relative;
   background-color: #f3dcbc;
-  background-image: url('src/assets/bg-no-qm.png');
+  background-image: url('/bg-no-qm.png');
   background-repeat: no-repeat;
   background-size: contain;
   height: 100vh;
