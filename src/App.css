@@ -47,6 +47,7 @@ body {
   transform: scale(1.10); 
   filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.4));
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .game-container {
@@ -71,7 +72,6 @@ body {
   width: 320px;
   height: auto;
 }
-
 
 .gamelink {
   text-decoration: none;
@@ -147,6 +147,7 @@ body {
 .answers:hover{
   color: #f3dcbc;
   background-color: #ff9a79;
+  cursor: pointer;
   
 }
 
@@ -176,11 +177,13 @@ body {
 .game-container:hover{
   background-color: #ff9a79;
   color: #f3dcbc;
+  cursor: pointer;
 }
 
 .buttons-wrapper:hover{
   background-color: #ff9a79;
   color: #f3dcbc;
+  cursor: pointer;
 }
 
 .eg-container{
@@ -225,4 +228,59 @@ body {
 .pa-link:hover{
   color:#f3dcbc;
   background-color: #ff9a79;
+}
+
+.diff-grandpa {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15rem;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.diff-wrapper{
+  background-color:#f3dcbc;
+  border: 1px solid white;
+  border-radius: 20px;
+  width: 7rem;
+  height: auto;
+  left:50%;
+  position: relative;
+  transform: translateX(-50%);
+  color:#ff9a79;
+  margin: 1rem 0;
+}
+
+.diff-wrapper:hover{
+  background-color: #ff9a79;
+  color: #f3dcbc;
+  cursor: pointer;
+}
+
+.loading{
+  font-family: 'Lato', sans-serif;
+  position: relative;
+  width: 6.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff9a79;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.loading::after {
+  content: '...';
+  animation: blink 1s infinite;
+  animation-delay: 0s;
 }

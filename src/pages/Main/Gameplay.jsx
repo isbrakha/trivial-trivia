@@ -80,7 +80,7 @@ const Gameplay = () => {
     }
 
     const loading = () => {
-        return isLoading ? <h1>Loading.........</h1> : <h1>Error</h1>;
+        return isLoading ? <h1 className="loading">Loading</h1> : <h1 className="loading">Error</h1>;
       };
 
     return !isLoading ? loaded() : loading()
