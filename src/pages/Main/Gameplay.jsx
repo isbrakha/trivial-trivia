@@ -1,9 +1,10 @@
 import {useState, useEffect} from "react"
-import { useLocation } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 
 const Gameplay = () => {
     const [trivia, setTrivia] = useState([])
     const [isLoading, setIsLoading] = useState(true);
+    const navigate = useNavigate()
     const location = useLocation()
     const category = location.state?.category
     const [count, setCount] = useState(0)
@@ -46,6 +47,8 @@ const Gameplay = () => {
         }
         if (count >= trivia.length-1){ 
              console.log('finished')
+             navigate('/finish', {state: {score}})
+             
         } else {
             setCount(count+1)
         }
@@ -57,20 +60,20 @@ const Gameplay = () => {
         answers.push(...trivia[count].incorrectAnswers)
         answers.push(trivia[count].correctAnswer)
         shuffleArray(answers)
+        console.log(trivia)
        
         return(
             <section>
-                <div>
-                    <h2>{trivia[count].question.text}</h2>
+                <div className="question-wrapper">
+                    <h2 className="question">{trivia[count].question.text}</h2>
                 </div>
-                <div>
-                    <h3 onClick={handleClick}>{answers[0]}</h3>
-                    <h3 onClick={handleClick}>{answers[1]}</h3>
-                    <h3 onClick={handleClick}>{answers[2]}</h3>
-                    <h3 onClick={handleClick}>{answers[3]}</h3>
+                <div className="answers-container">
+                    <h3 className="answers" onClick={handleClick}>{answers[0]}</h3>
+                    <h3 className="answers" onClick={handleClick}>{answers[1]}</h3>
+                    <h3 className="answers" onClick={handleClick}>{answers[2]}</h3>
+                    <h3 className="answers" onClick={handleClick}>{answers[3]}</h3>
                 </div>
-                <h2>Score: {score}</h2>
-                <h2>Count: {count}</h2>
+                <h2 className="score">Score: {score}</h2>
             </section>
         )
     }

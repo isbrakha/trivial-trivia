@@ -14,8 +14,8 @@ const SignIn = () => {
       };
  
     return (
-        <div className="sign-in-container">
-         <img className="sign-in-button" src="/public/google-button.png" alt="google log in" onClick={handleLogin}/>
+        <div id="sign-in-container">
+         <img className="sign-in-button" src="src/assets/google-button.png" alt="google log in" onClick={handleLogin}/>
          </div>
     )
 }

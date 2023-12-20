@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom"
 const ChooseGame = () => {
+
     return (
+      <section>
         <div className="game-container">
-          <h1 className="game">New Game</h1>
-          <h1 className="game">Continue</h1>
+          <Link to = '/category' className="gamelink"><h1 className="game">Start Game</h1></Link>
         </div>
+      </section>
     )
 }
 

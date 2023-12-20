@@ -6,13 +6,9 @@ import SignIn from './pages/Main/SignIn'
 import ChooseGame from './pages/Main/ChooseGame'
 import Category from './pages/Main/ChooseCategory'
 import Gameplay from './pages/Main/Gameplay'
+import Endgame from "./pages/Main/Endgame";
 import Auth0ProviderWithNavigate from "./components/Auth/Auth0ProviderWithNavigate";
-import { createRoot } from "react-dom/client";
-
-
-const container = document.getElementById("root");
-
-
+import Settings from "./pages/Main/Settings";
 
 const App = () => {
   return (
@@ -25,6 +21,8 @@ const App = () => {
           <Route path="/start" element={<ChooseGame />}/>
           <Route path="/category" element={<Category />}/>
           <Route path="/play" element={<Gameplay />}/>
+          <Route path="/finish" element={<Endgame />}/>
+          <Route path="/setting" element={<Settings />}/>
 
         </Routes>
         </Auth0ProviderWithNavigate>
