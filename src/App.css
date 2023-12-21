@@ -178,7 +178,7 @@ body {
   transform: translateX(-50%);
   border-radius: 20px;
   padding: 0px;
-  margin-top: 10rem;
+  margin-top: 7rem;
 }
 
 .score{
@@ -450,3 +450,8 @@ body {
   }
 }
 
+@media screen and (max-height: 512px) {
+  .footer-container {
+     display: none;
+  }
+}
