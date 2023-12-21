@@ -10,8 +10,17 @@ import Endgame from "./pages/Main/Endgame";
 import Auth0ProviderWithNavigate from "./components/Auth/Auth0ProviderWithNavigate";
 import Settings from "./pages/Main/Settings";
 import Difficulty from "./pages/Main/ChooseDifficulty";
+import Footer from "./pages/Footer";
+import { useLocation } from "react-router-dom";
+
+
 
 const App = () => {
+  const RenderFooter = () => {
+    const location = useLocation()
+    return location.pathname !== '/' ? <Footer/> : null
+  }
+
   return (
     <Router>
       <div className="app-container">
@@ -26,6 +35,7 @@ const App = () => {
           <Route path="/difficulty" element={<Difficulty />}/>
           <Route path="/settings" element={<Settings />}/>
         </Routes>
+        <RenderFooter/>
         </Auth0ProviderWithNavigate>
       </div>
     </Router>

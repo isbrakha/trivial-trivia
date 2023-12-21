@@ -206,9 +206,6 @@ body {
   color: #ff9a79;
 }
 
-.eg-message{
-  
-}
 
 .pa-link{
   text-decoration: none;
@@ -283,4 +280,44 @@ body {
   content: '...';
   animation: blink 1s infinite;
   animation-delay: 0s;
+}
+
+.footer-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+  position:fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color:#f3dcbc;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 0 1rem;
+  height: 3rem;
+  bottom: 2rem;
+  align-items: center;
+}
+
+.footer-inner{
+  font-family: 'Lato', sans-serif;
+  color:#ff9a79;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-text{
+  font-size: medium;
+  padding: 0 2rem;
+}
+.text-wrapper:hover{
+  background-color: #ff9a79;
+  border-radius: 20px;
+  color: #f3dcbc;
+  cursor: pointer;
+}
+
+.footer-text:hover{
+  
 }
