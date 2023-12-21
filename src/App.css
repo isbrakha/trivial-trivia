@@ -140,6 +140,10 @@ body {
   background-color: #f3dcbc;
   padding: .3rem;
   border-radius: 20px;
+  max-height: 15rem; /* Limit the height */
+  overflow-y: auto; /* Allow vertical scrolling */
+  text-overflow: ellipsis;
+
 }
 
 .answers-container{
