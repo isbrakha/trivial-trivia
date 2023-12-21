@@ -460,3 +460,44 @@ body {
      display: none;
   }
 }
+
+@media screen and (max-height: 1000px) {
+  .button-grandpa{
+    margin-top: 1.5rem;
+  }
+
+  .buttons-wrapper{
+    margin-left: -6vh;
+    width: 40%; 
+
+  }
+
+  .buttons-wrapper-left{
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .button-grandpa {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the items horizontally */
+  }
+
+  .buttons-wrapper,
+  .buttons-wrapper-left {
+    width: 100%; /* Make buttons take full width of the container */
+
+    margin-left: 0; /* Reset any specific margins */
+    margin-right: 0; /* Reset any specific margins */
+    height: 4vh;
+    max-width: -moz-fit-content; /* For Firefox */
+    /* box-sizing: border-box */
+    margin: 0;
+  }
+
+  .buttons{
+    width: 100%;
+    font-size: xx-small;
+  }
+}
