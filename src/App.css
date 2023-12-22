@@ -349,7 +349,6 @@ body {
 .qm {
   height: 35rem;
   animation: dance 2s infinite;
-  
 }
 
 @keyframes dance {
@@ -499,5 +498,18 @@ body {
   .buttons{
     width: 100%;
     font-size: xx-small;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .qm {
+    margin-top: 20rem;
+    height: 20rem;
+  }
+}
+
+@media screen and (max-height: 613px) {
+  .qm {
+    height: 15rem;
   }
 }
