@@ -13,10 +13,13 @@ const Gameplay = () => {
     const fetchTrivia = async () => {
         try {
             const res = await fetch(`https://the-trivia-api.com/v2/questions?categories=${category}&${difficulty}`, {
+
                 headers: {
                     'Content-Type': 'application/json',
                 }
+                
             })
+            console.log(category)
             const triviaData = await res.json()
             setTrivia(triviaData)
         } catch (err){
@@ -61,8 +64,8 @@ const Gameplay = () => {
         answers.push(...trivia[count].incorrectAnswers)
         answers.push(trivia[count].correctAnswer)
         shuffleArray(answers)
-        console.log(trivia)
-       
+     
+
         return(
             <section className="game-section">
                 <div className="question-wrapper">

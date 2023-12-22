@@ -14,7 +14,7 @@ const Category = () => {
             <div className="buttons-wrapper-left" onClick={() => handleClick("history")}>
                 <h2 className= "buttons">History</h2>
             </div>
-            <div className="buttons-wrapper" onClick={() => handleClick("sports_and_leisure")}>
+            <div className="buttons-wrapper" onClick={() => handleClick("sport_and_leisure")}>
                 <h2 className= "buttons">Sports and Leisure</h2>
             </div>
             <div className="buttons-wrapper-left" onClick={() => handleClick("music")}>
