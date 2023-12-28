@@ -8,6 +8,7 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 1.25rem;
+
 }
 
 .header-inner {
@@ -435,7 +436,7 @@ body {
 }
 
 
-@media screen and (max-height: 650px) {
+@media screen and (max-height: 590px) {
   .header-container {
       display: none;
   }
@@ -454,7 +455,7 @@ body {
   }
 }
 
-@media screen and (max-height: 512px) {
+@media screen and (max-height: 654px) {
   .footer-container {
      display: none;
   }
@@ -480,18 +481,17 @@ body {
   .button-grandpa {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the items horizontally */
+    align-items: center;
   }
 
   .buttons-wrapper,
   .buttons-wrapper-left {
-    width: 100%; /* Make buttons take full width of the container */
+    width: 100%;
 
-    margin-left: 0; /* Reset any specific margins */
-    margin-right: 0; /* Reset any specific margins */
+    margin-left: 0;
+    margin-right: 0;
     height: 4vh;
-    max-width: -moz-fit-content; /* For Firefox */
-    /* box-sizing: border-box */
+    max-width: -moz-fit-content;
     margin: 0;
   }
 
@@ -513,3 +513,19 @@ body {
     height: 15rem;
   }
 }
+
+@media screen and (max-height: 670px) {
+  .diff-grandpa {
+    margin-top: 0rem;
+  }
+}
+
+
+
+@media screen and (max-height: 670px) {
+  .button-grandpa {
+    margin-top: -.1rem;
+  }
+}
+
+
