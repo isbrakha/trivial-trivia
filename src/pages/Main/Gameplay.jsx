@@ -19,7 +19,6 @@ const Gameplay = () => {
                 }
                 
             })
-            console.log(category)
             const triviaData = await res.json()
             setTrivia(triviaData)
         } catch (err){
